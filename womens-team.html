@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palaiseau Sydney Club | Women's Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="womens-team-page">
+  <header class="site-header">
+    <nav class="top-bar">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Club logo" class="logo">
+      </a>
+
+      <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="team.html">Team</a></li>
+        <li><a href="matches.html">Match</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h1>Women's Team</h1>
+    </section>
+
+    <section class="coach-section">
+      <article class="coach-card">
+        <p class="tag">Coach</p>
+        <img src="images/coach.jpg" alt="Coach Lambert">
+        <h2>Lambert</h2>
+      </article>
+    </section>
+
+    <section class="formation-section">
+      <h2>Starting XI</h2>
+
+      <section class="formation-pitch">
+        <div class="pitch-center-circle"></div>
+        <div class="pitch-center-dot"></div>
+        <div class="pitch-box-top"></div>
+        <div class="pitch-small-box-top"></div>
+        <div class="pitch-box-bottom"></div>
+        <div class="pitch-small-box-bottom"></div>
+
+        <article class="pitch-player goalkeeper">
+          <img src="images/womens_palyers/player1.png" alt="Camille">
+          <h3>Camille</h3>
+          <p>GK</p>
+        </article>
+
+        <article class="pitch-player left-back">
+          <img src="images/womens_palyers/player2.png" alt="Dubois">
+          <h3>Dubois</h3>
+          <p>LB</p>
+        </article>
+
+        <article class="pitch-player centre-back-1">
+          <img src="images/womens_palyers/player3.png" alt="Garcia">
+          <h3>Garcia</h3>
+          <p>CB</p>
+        </article>
+
+        <article class="pitch-player centre-back-2">
+          <img src="images/womens_palyers/player4.png" alt="Duval">
+          <h3>Duval</h3>
+          <p>CB</p>
+        </article>
+
+        <article class="pitch-player right-back">
+          <img src="images/womens_palyers/player5.png" alt="Moreau">
+          <h3>Moreau</h3>
+          <p>RB</p>
+        </article>
+
+        <article class="pitch-player midfielder-1">
+          <img src="images/womens_palyers/player6.png" alt="Robert">
+          <h3>Robert</h3>
+          <p>CDM</p>
+        </article>
+
+        <article class="pitch-player midfielder-2">
+          <img src="images/womens_palyers/player7.png" alt="Martin">
+          <h3>Martin</h3>
+          <p>CM</p>
+        </article>
+
+        <article class="pitch-player midfielder-3">
+          <img src="images/womens_palyers/player8.png" alt="Petit">
+          <h3>Petit</h3>
+          <p>CM</p>
+        </article>
+
+        <article class="pitch-player left-wing" onclick="openCard('mendes-card')">
+          <img src="images/womens_palyers/player9.png" alt="Mendes">
+          <h3>Mendes</h3>
+          <p>LW</p>
+        </article>
+
+        <article class="pitch-player striker" onclick="openCard('rousseau-card')">
+          <img src="images/womens_palyers/player10.png" alt="Rousseau">
+          <h3>Rousseau</h3>
+          <p>ST</p>
+        </article>
+
+        <article class="pitch-player right-wing">
+          <img src="images/womens_palyers/player11.png" alt="Dupont">
+          <h3>Dupont</h3>
+          <p>RW</p>
+        </article>
+      </section>
+    </section>
+
+    <div class="card-overlay" id="card-overlay" onclick="closeAllCards()"></div>
+
+    <section class="player-cards-container">
+      <article class="fut-card" id="mendes-card">
+        <button class="close-card" onclick="closeCard('mendes-card')">×</button>
+        <p class="card-rating">87</p>
+        <p class="card-position">LW</p>
+        <img src="images/womens_palyers/player9.png" alt="Mendes" class="fut-player-img">
+        <h3>Mendes</h3>
+        <p>Nationality: France</p>
+        <p>Age: 24</p>
+        <p>Strong dribbler with excellent pace and attacking movement.</p>
+      </article>
+
+      <article class="fut-card" id="rousseau-card">
+        <button class="close-card" onclick="closeCard('rousseau-card')">×</button>
+        <p class="card-rating">89</p>
+        <p class="card-position">ST</p>
+        <img src="images/womens_palyers/player10.png" alt="Rousseau" class="fut-player-img">
+        <h3>Rousseau</h3>
+        <p>Nationality: France</p>
+        <p>Age: 26</p>
+        <p>Main striker of the team, known for finishing and positioning.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-links">
+      <a href="team.html">Team</a>
+      <a href="matches.html">Match</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <section class="footer-slogan">
+      <p>Always Advancing !</p>
+      <p>&copy; Palaiseau Sydney Club</p>
+    </section>
+
+    <nav class="social-media">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+    </nav>
+  </footer>
+
+  <script>
+    function openCard(cardId) {
+      const allCards = document.querySelectorAll(".fut-card");
+      allCards.forEach(card => card.classList.remove("show"));
+      document.getElementById("card-overlay").classList.add("show-overlay");
+      document.getElementById(cardId).classList.add("show");
+    }
+
+    function closeCard(cardId) {
+      document.getElementById(cardId).classList.remove("show");
+      document.getElementById("card-overlay").classList.remove("show-overlay");
+    }
+
+    function closeAllCards() {
+      const allCards = document.querySelectorAll(".fut-card");
+      allCards.forEach(card => card.classList.remove("show"));
+      document.getElementById("card-overlay").classList.remove("show-overlay");
+    }
+  </script>
+</body>
+</html>

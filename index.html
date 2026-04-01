@@ -10,35 +10,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="home-page">
-<header class="site-header">
-  <nav class="top-bar">
-     <details class="mobile-menu">
-      <summary>☰</summary>
-      <ul class="mobile-nav-list">
+  <header class="site-header">
+    <nav class="top-bar">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Palaiseau Sydney Club logo" class="logo">
+      </a>
+
+      <ul class="desktop-nav">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="team.html">Team</a></li>
-        <li><a href="matches.html">Matches</a></li>
+        <li><a href="matches.html">Match</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="member.html">Member</a></li>
       </ul>
-    </details>
-    <a href="index.html">
-      <img src="images/logo.png" alt="Palaiseau Sydney Club logo" class="logo">
-    </a>
-
-    <ul class="main-nav desktop-nav">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="matches.html">Matches</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="member.html">Member</a></li>
-    </ul>
-
-   
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <main>
     <section class="page-title">
@@ -49,55 +35,59 @@
       <img src="images/Hero IMG Home.jpg" alt="Palaiseau Sydney Club players preparing before a match">
     </section>
 
-<section class="match-section">
-  <h2>Upcoming</h2>
+    <section class="match-section">
+      <h2>Upcoming Match</h2>
 
-  <section class="match-card">
-    <section class="match-top-row">
-      <article class="team team-left">
-        <img src="images/logo.png" alt="Palaiseau Sydney Club logo">
-        <h3>PSC</h3>
-      </article>
+      <article class="upcoming-card">
+        <img src="images/competition.png" alt="Champions League logo" class="competition-bg">
 
-      <section class="vs-box">
-        <h3 class="vs-title">VS</h3>
-      </section>
+        <p class="match-meta">
+          <span class="match-tag">Match</span>
+          <span>10 Apr. 2026 · 18:45</span>
+        </p>
 
-      <article class="team team-right">
-        <h3>MARSEILLE</h3>
-        <img src="images/logo.png" alt="Marseille logo">
+        <section class="match-teams">
+          <article class="match-team">
+            <img src="images/logo.png" alt="Palaiseau Sydney Club logo">
+            <h3>PSC</h3>
+          </article>
+
+          <section class="match-vs">
+            <span>VS</span>
+          </section>
+
+          <article class="match-team">
+            <img src="images/marseille logo.png" alt="Marseille logo">
+            <h3>Marseille</h3>
+          </article>
+        </section>
+
+        <a href="#" class="ticket-button">Buy Tickets</a>
       </article>
     </section>
-
-    <section class="match-bottom-row">
-      <p class="match-date">Brassens stadium - 10 august 2026</p>
-      <a href="#" class="button">Buy Tickets</a>
-    </section>
-  </section>
-</section>
 
     <section class="news-section">
       <h2>Latest News</h2>
 
       <section class="news-grid">
         <article class="news-card">
-          <h3>Training Session Success</h3>
+          <h3>Impressive Win Against Top 4 Rival</h3>
           <p>
-            The squad completed an intense training session this week as preparation continues
-            for the next important fixture of the season.
+            The men's team won their last match against the 4th ranked team.
+            A great performance that shows their progress and confidence this season.
           </p>
           <img src="images/news-1.jpg" alt="Players training together on the field">
-          <a class="button" href="about.html">Read More</a>
+          <a href="about.html" class="button">Read More</a>
         </article>
 
         <article class="news-card">
-          <h3>Community Football Day</h3>
+          <h3>Women's Team Ready for Historic Rival Clash</h3>
           <p>
-            Supporters and young players joined the club for a community football day focused
-            on teamwork, fitness, and club spirit.
+            The women's team is getting ready to face their historic rival in an important home match.
+            With strong motivation and the support of their fans, the squad is determined to deliver a top performance.
           </p>
           <img src="images/news-2.jpg" alt="Team and supporters during a community event">
-          <a class="button" href="about.html">Read More</a>
+          <a href="about.html" class="button">Read More</a>
         </article>
       </section>
     </section>
@@ -106,8 +96,8 @@
   <footer class="site-footer">
     <nav class="footer-links">
       <a href="team.html">Team</a>
-      <a href="index.html">Match</a>
-      <a href="index.html">News</a>
+      <a href="matches.html">Match</a>
+      <a href="news.html">News</a>
       <a href="about.html">About</a>
     </nav>
 
@@ -117,9 +107,9 @@
     </section>
 
     <nav class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
     </nav>
   </footer>
 </body>
