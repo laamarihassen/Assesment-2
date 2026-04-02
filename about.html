@@ -10,19 +10,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="about-page">
- <header class="site-header">
-  <nav class="top-bar">
-    <a class="logo" href="index.html">LOGO</a>
-    <ul class="main-nav">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="matches.html">Matches</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="member.html">Member</a></li>
-    </ul>
-  </nav>
-</header>
+
+  <header class="site-header">
+    <nav class="top-bar">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Palaiseau Sydney Club logo" class="logo">
+      </a>
+
+      <!-- Only Home, Team, Women's Team and About pages are functional for this assessment -->
+      <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="#">Match</a></li>
+        <li><a href="#">News</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section class="page-title">
@@ -30,52 +34,52 @@
     </section>
 
     <section class="about-layout">
-      <section class="about-text">
+      <article class="about-main-card">
         <h2>Who We Are</h2>
         <p>
-          Palaiseau Sydney Club is a football club created to bring together players,
-          supporters, and the local community through a shared passion for sport.
+          Palaiseau Sydney Club is a football club built around passion, ambition, and team spirit.
+          The club brings together players, supporters, and the local community through a shared love of the game.
         </p>
         <p>
-          The club identity reflects unity, progress, and ambition. Its slogan,
-          <strong>Always Advancing</strong>, represents the desire to improve both on and
-          off the field.
+          Our identity is based on progress, discipline, and unity. The slogan
+          <strong>“Always Advancing”</strong> reflects the club’s commitment to improving on and off the pitch.
         </p>
         <p>
-          The club also celebrates a connection between Palaiseau and Sydney, combining local
-          roots with an international sporting vision.
+          Through training, competition, and community involvement, the club aims to create a strong sporting environment
+          where players can grow, perform, and represent the club with pride.
         </p>
-      </section>
+      </article>
 
-      <aside class="side-box gallery-box">
-        <h2>Gallery</h2>
-        <img src="images/gallery-1.jpg" alt="Team celebration after a football match">
-      </aside>
-
-      <aside class="side-box contact-box">
-        <h2>Contact</h2>
-        <p><strong>Address:</strong> 15 Club Street, Palaiseau</p>
-        <p><strong>Email:</strong> contact@palaiseausydneyclub.com</p>
-        <p><strong>Phone:</strong> +33 1 23 45 67 89</p>
+      <aside class="about-side-card">
+        <h2>Club Info</h2>
+        <p><strong>Founded:</strong> 2026</p>
+        <p><strong>Location:</strong> Palaiseau, France</p>
+        <p><strong>Stadium:</strong> Brassens Stadium</p>
+        <p><strong>Colours:</strong> Blue, Yellow, Black</p>
+        <p><strong>Motto:</strong> Always Advancing</p>
       </aside>
     </section>
 
-    <section class="references-section">
-      <h2>References</h2>
-      <ul>
-        <li>Mozilla (2024) <em>HTML Basics</em>.</li>
-        <li>W3C (2023) <em>CSS Overview</em>.</li>
-        <li>W3C (2023) <em>HTTP Overview</em>.</li>
-        <li>PSG (2024) <em>Paris Saint-Germain Official Website</em>.</li>
-      </ul>
+    <section class="about-bottom-grid">
+      <article class="about-gallery-card">
+        <h2>Gallery</h2>
+        <img src="images/about-team.jpg" alt="Palaiseau Sydney Club team photo">
+      </article>
+
+      <article class="about-contact-card">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> contact@pscclub.com</p>
+        <p><strong>Phone:</strong> +33 1 23 45 67 89</p>
+        <p><strong>Address:</strong> Brassens Stadium, Palaiseau</p>
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
     <nav class="footer-links">
       <a href="team.html">Team</a>
-      <a href="index.html">Match</a>
-      <a href="index.html">News</a>
+      <a href="#">Match</a>
+      <a href="#">News</a>
       <a href="about.html">About</a>
     </nav>
 
@@ -85,10 +89,11 @@
     </section>
 
     <nav class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
     </nav>
   </footer>
+
 </body>
 </html>

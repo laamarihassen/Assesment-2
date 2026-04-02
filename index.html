@@ -1,3 +1,5 @@
+<!-- Only Home, Team and Women's Team pages are functional for this assessment -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +20,16 @@
 
       <ul class="desktop-nav">
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="matches.html">Match</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+  <a href="team.html">Team</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Men's Team</a></li>
+    <li><a href="womens-team.html">Women's Team</a></li>
+  </ul>
+</li>
+        <li><a href="#" onclick="return false;">Match</a></li>
+<li><a href="#" onclick="return false;">News</a></li>
+<li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
@@ -77,7 +85,7 @@
             A great performance that shows their progress and confidence this season.
           </p>
           <img src="images/news-1.jpg" alt="Players training together on the field">
-          <a href="about.html" class="button">Read More</a>
+          <a href="#" class="button">Read More</a>
         </article>
 
         <article class="news-card">
@@ -87,7 +95,7 @@
             With strong motivation and the support of their fans, the squad is determined to deliver a top performance.
           </p>
           <img src="images/news-2.jpg" alt="Team and supporters during a community event">
-          <a href="about.html" class="button">Read More</a>
+          <a href="#" class="button">Read More</a>
         </article>
       </section>
     </section>
@@ -95,10 +103,11 @@
 
   <footer class="site-footer">
     <nav class="footer-links">
+      <a href="index.html">Home</a>
       <a href="team.html">Team</a>
-      <a href="matches.html">Match</a>
-      <a href="news.html">News</a>
-      <a href="about.html">About</a>
+      <a href="#" onclick="return false;">Match</a>
+      <a href="#" onclick="return false;">News</a>
+      <a href="#" onclick="return false;">About</a>
     </nav>
 
     <section class="footer-slogan">
