@@ -13,15 +13,21 @@
   <header class="site-header">
     <nav class="top-bar">
       <a href="index.html">
-        <img src="images/logo.png" alt="Club logo" class="logo">
+        <img src="images/Home_page/logo.png" alt="Club logo" class="logo">
       </a>
 
       <ul class="desktop-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="team.html">Team</a></li>
+        <li class="dropdown">
+          <a class="active" href="team.html">Team</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="return false;">Men's Team</a></li>
+            <li><a href="womens-team.html">Women's Team</a></li>
+          </ul>
+        </li>
         <li><a href="#" onclick="return false;">Match</a></li>
-<li><a href="#" onclick="return false;">News</a></li>
-<li><a href="about.html">About</a></li>
+        <li><a href="#" onclick="return false;">News</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
@@ -32,113 +38,199 @@
     </section>
 
     <section class="formation-section">
-      <h2>Starting XI</h2>
+  <section class="formation-pitch half-pitch">
+    <div class="pitch-box-top"></div>
+    <div class="pitch-small-box-top"></div>
 
-      <section class="formation-pitch">
-        <div class="pitch-center-circle"></div>
-        <div class="pitch-center-dot"></div>
-        <div class="pitch-box-top"></div>
-        <div class="pitch-small-box-top"></div>
-        <div class="pitch-box-bottom"></div>
-        <div class="pitch-small-box-bottom"></div>
+    <article class="pitch-player goalkeeper" onclick="openCard('camille-card')">
+      <img src="images/Women's_team_page/player1.png" alt="Camille">
+      <h3>Camille</h3>
+      <p>GK</p>
+    </article>
 
-         <div class="pitch-player coach">
-  <img src="images/womens_palyers/coach.png" alt="Coach Lambert">
-  <h3>LAMBERT</h3>
-  <p>Coach</p>
-</div>
+    <article class="pitch-player left-back" onclick="openCard('dubois-card')">
+      <img src="images/Women's_team_page/player2.png" alt="Dubois">
+      <h3>Dubois</h3>
+      <p>LB</p>
+    </article>
 
-        <article class="pitch-player goalkeeper">
-          <img src="images/womens_palyers/player1.png" alt="Camille">
-          <h3>Camille</h3>
-          <p>GK</p>
-        </article>
+    <article class="pitch-player centre-back-1" onclick="openCard('garcia-card')">
+      <img src="images/Women's_team_page/player3.png" alt="Garcia">
+      <h3>Garcia</h3>
+      <p>CB</p>
+    </article>
 
-        <article class="pitch-player left-back">
-          <img src="images/womens_palyers/player2.png" alt="Dubois">
-          <h3>Dubois</h3>
-          <p>LB</p>
-        </article>
+    <article class="pitch-player centre-back-2" onclick="openCard('duval-card')">
+      <img src="images/Women's_team_page/player4.png" alt="Duval">
+      <h3>Duval</h3>
+      <p>CB</p>
+    </article>
 
-        <article class="pitch-player centre-back-1">
-          <img src="images/womens_palyers/player3.png" alt="Garcia">
-          <h3>Garcia</h3>
-          <p>CB</p>
-        </article>
+    <article class="pitch-player right-back" onclick="openCard('moreau-card')">
+      <img src="images/Women's_team_page/player5.png" alt="Moreau">
+      <h3>Moreau</h3>
+      <p>RB</p>
+    </article>
 
-        <article class="pitch-player centre-back-2">
-          <img src="images/womens_palyers/player4.png" alt="Duval">
-          <h3>Duval</h3>
-          <p>CB</p>
-        </article>
+    <article class="pitch-player midfielder-1" onclick="openCard('robert-card')">
+      <img src="images/Women's_team_page/player6.png" alt="Robert">
+      <h3>Robert</h3>
+      <p>CDM</p>
+    </article>
 
-        <article class="pitch-player right-back">
-          <img src="images/womens_palyers/player5.png" alt="Moreau">
-          <h3>Moreau</h3>
-          <p>RB</p>
-        </article>
+    <article class="pitch-player midfielder-2" onclick="openCard('martin-card')">
+      <img src="images/Women's_team_page/player7.png" alt="Martin">
+      <h3>Martin</h3>
+      <p>CM</p>
+    </article>
 
-        <article class="pitch-player midfielder-1">
-          <img src="images/womens_palyers/player6.png" alt="Robert">
-          <h3>Robert</h3>
-          <p>CDM</p>
-        </article>
+    <article class="pitch-player midfielder-3" onclick="openCard('petit-card')">
+      <img src="images/Women's_team_page/player8.png" alt="Petit">
+      <h3>Petit</h3>
+      <p>CM</p>
+    </article>
 
-        <article class="pitch-player midfielder-2">
-          <img src="images/womens_palyers/player7.png" alt="Martin">
-          <h3>Martin</h3>
-          <p>CM</p>
-        </article>
+    <article class="pitch-player left-wing" onclick="openCard('mendes-card')">
+      <img src="images/Women's_team_page/player9.png" alt="Mendes">
+      <h3>Mendes</h3>
+      <p>LW</p>
+    </article>
 
-        <article class="pitch-player midfielder-3">
-          <img src="images/womens_palyers/player8.png" alt="Petit">
-          <h3>Petit</h3>
-          <p>CM</p>
-        </article>
+    <article class="pitch-player striker" onclick="openCard('rousseau-card')">
+      <img src="images/Women's_team_page/player10.png" alt="Rousseau">
+      <h3>Rousseau</h3>
+      <p>ST</p>
+    </article>
 
-        <article class="pitch-player left-wing" onclick="openCard('mendes-card')">
-          <img src="images/womens_palyers/player9.png" alt="Mendes">
-          <h3>Mendes</h3>
-          <p>LW</p>
-        </article>
+    <article class="pitch-player right-wing" onclick="openCard('dupont-card')">
+      <img src="images/Women's_team_page/player11.png" alt="Dupont">
+      <h3>Dupont</h3>
+      <p>RW</p>
+    </article>
+  </section>
 
-        <article class="pitch-player striker" onclick="openCard('rousseau-card')">
-          <img src="images/womens_palyers/player10.png" alt="Rousseau">
-          <h3>Rousseau</h3>
-          <p>ST</p>
-        </article>
+  <div class="coach-container">
+    <div class="pitch-player coach">
+      <img src="images/Women's_team_page/coach.png" alt="Coach Lambert">
+      <h3>Lambert</h3>
+      <p>Coach</p>
+    </div>
 
-        <article class="pitch-player right-wing">
-          <img src="images/womens_palyers/player11.png" alt="Dupont">
-          <h3>Dupont</h3>
-          <p>RW</p>
-        </article>
-      </section>
-    </section>
+    <p class="formation-subtitle">4-3-3 Formation</p>
+  </div>
+</section>
 
     <div class="card-overlay" id="card-overlay" onclick="closeAllCards()"></div>
 
     <section class="player-cards-container">
+      <article class="fut-card" id="camille-card">
+        <button class="close-card" onclick="closeCard('camille-card')">×</button>
+        <p class="card-position">GK</p>
+        <img src="images/Women's_team_page/player1.png" alt="Camille" class="fut-player-img">
+        <h3>Camille</h3>
+        <p>Nationality: 🇫🇷 France</p>
+        <p>Age: 27</p>
+        <p>Reliable goalkeeper with strong reflexes and positioning.</p>
+      </article>
+
+      <article class="fut-card" id="dubois-card">
+        <button class="close-card" onclick="closeCard('dubois-card')">×</button>
+        <p class="card-position">LB</p>
+        <img src="images/Women's_team_page/player2.png" alt="Dubois" class="fut-player-img">
+        <h3>Dubois</h3>
+        <p>Nationality: 🇫🇷 France</p>
+        <p>Age: 25</p>
+        <p>Fast defender with great stamina and defensive awareness.</p>
+      </article>
+
+      <article class="fut-card" id="garcia-card">
+        <button class="close-card" onclick="closeCard('garcia-card')">×</button>
+        <p class="card-position">CB</p>
+        <img src="images/Women's_team_page/player3.png" alt="Garcia" class="fut-player-img">
+        <h3>Garcia</h3>
+        <p>Nationality: 🇪🇸 Spain</p>
+        <p>Age: 28</p>
+        <p>Strong center-back with excellent tackling and leadership.</p>
+      </article>
+
+      <article class="fut-card" id="duval-card">
+        <button class="close-card" onclick="closeCard('duval-card')">×</button>
+        <p class="card-position">CB</p>
+        <img src="images/Women's_team_page/player4.png" alt="Duval" class="fut-player-img">
+        <h3>Duval</h3>
+        <p>Nationality: 🇫🇷 France</p>
+        <p>Age: 26</p>
+        <p>Solid defender known for aerial duels and positioning.</p>
+      </article>
+
+      <article class="fut-card" id="moreau-card">
+        <button class="close-card" onclick="closeCard('moreau-card')">×</button>
+        <p class="card-position">RB</p>
+        <img src="images/Women's_team_page/player5.png" alt="Moreau" class="fut-player-img">
+        <h3>Moreau</h3>
+        <p>Nationality: 🇫🇷 France</p>
+        <p>Age: 24</p>
+        <p>Dynamic right-back with attacking support abilities.</p>
+      </article>
+
+      <article class="fut-card" id="robert-card">
+        <button class="close-card" onclick="closeCard('robert-card')">×</button>
+        <p class="card-position">CDM</p>
+        <img src="images/Women's_team_page/player6.png" alt="Robert" class="fut-player-img">
+        <h3>Robert</h3>
+        <p>Nationality: 🇫🇷 France</p>
+        <p>Age: 27</p>
+        <p>Defensive midfielder with great vision and interceptions.</p>
+      </article>
+
+      <article class="fut-card" id="martin-card">
+        <button class="close-card" onclick="closeCard('martin-card')">×</button>
+        <p class="card-position">CM</p>
+        <img src="images/Women's_team_page/player7.png" alt="Martin" class="fut-player-img">
+        <h3>Martin</h3>
+        <p>Nationality: 🇩🇪 Germany</p>
+        <p>Age: 25</p>
+        <p>Creative midfielder with excellent passing ability.</p>
+      </article>
+
+      <article class="fut-card" id="petit-card">
+        <button class="close-card" onclick="closeCard('petit-card')">×</button>
+        <p class="card-position">CM</p>
+        <img src="images/Women's_team_page/player8.png" alt="Petit" class="fut-player-img">
+        <h3>Petit</h3>
+        <p>Nationality: 🇫🇷 France</p>
+        <p>Age: 24</p>
+        <p>Box-to-box midfielder with high energy and work rate.</p>
+      </article>
+
       <article class="fut-card" id="mendes-card">
         <button class="close-card" onclick="closeCard('mendes-card')">×</button>
-        <p class="card-rating">87</p>
         <p class="card-position">LW</p>
-        <img src="images/womens_palyers/player9.png" alt="Mendes" class="fut-player-img">
+        <img src="images/Women's_team_page/player9.png" alt="Mendes" class="fut-player-img">
         <h3>Mendes</h3>
-        <p>Nationality: France</p>
+        <p>Nationality: 🇧🇷 Brazil</p>
         <p>Age: 24</p>
         <p>Strong dribbler with excellent pace and attacking movement.</p>
       </article>
 
       <article class="fut-card" id="rousseau-card">
         <button class="close-card" onclick="closeCard('rousseau-card')">×</button>
-        <p class="card-rating">89</p>
         <p class="card-position">ST</p>
-        <img src="images/womens_palyers/player10.png" alt="Rousseau" class="fut-player-img">
+        <img src="images/Women's_team_page/player10.png" alt="Rousseau" class="fut-player-img">
         <h3>Rousseau</h3>
-        <p>Nationality: France</p>
+        <p>Nationality: 🇫🇷 France</p>
         <p>Age: 26</p>
         <p>Main striker of the team, known for finishing and positioning.</p>
+      </article>
+
+      <article class="fut-card" id="dupont-card">
+        <button class="close-card" onclick="closeCard('dupont-card')">×</button>
+        <p class="card-position">RW</p>
+        <img src="images/Women's_team_page/player11.png" alt="Dupont" class="fut-player-img">
+        <h3>Dupont</h3>
+        <p>Nationality: 🇺🇸 USA</p>
+        <p>Age: 23</p>
+        <p>Explosive winger with speed and dribbling skills.</p>
       </article>
     </section>
   </main>
@@ -147,9 +239,9 @@
     <nav class="footer-links">
       <a href="index.html">Home</a>
       <a href="team.html">Team</a>
-       <a href="#" onclick="return false;">Match</a>
+      <a href="#" onclick="return false;">Match</a>
       <a href="#" onclick="return false;">News</a>
-      <a href="#" onclick="return false;">About</a>
+      <a href="about.html">About</a>
     </nav>
 
     <section class="footer-slogan">
@@ -158,9 +250,9 @@
     </section>
 
     <nav class="social-media">
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+      <a href="#"><img src="images/Social_media/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/Social_media/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="images/Social_media/tiktok.png" alt="TikTok"></a>
     </nav>
   </footer>
 

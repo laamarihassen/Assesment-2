@@ -43,6 +43,8 @@ main {
 /* ===== HEADER ===== */
 .site-header {
   border-top: 4px solid #0081cc;
+  position: relative;
+  z-index: 1000;
 }
 
 .top-bar {
@@ -52,6 +54,8 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
+  position: relative;
+  z-index: 1100;
 }
 
 .logo {
@@ -81,9 +85,9 @@ main {
 /* Dropdown container */
 .dropdown {
   position: relative;
+  z-index: 1200;
 }
 
-/* Menu caché par défaut */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -99,6 +103,7 @@ main {
   overflow: hidden;
   background-color: #ffffff;
   border: 2px solid #0081cc;
+  z-index: 1300;
 }
 
 /* Items */
@@ -184,7 +189,16 @@ main {
   font-size: 2.5rem;
   margin-bottom: 25px;
 }
-
+.match-competition {
+  display: inline-block;
+  background-color: #0081cc;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
 .upcoming-card {
   position: relative;
   max-width: 950px;
@@ -284,6 +298,11 @@ main {
   padding: 24px;
   border-radius: 18px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .news-card h3 {
@@ -297,6 +316,18 @@ main {
 .news-card img {
   width: 70%;
   margin: 14px auto 18px;
+  transition: transform 0.4s ease;
+}
+.news-card:hover img {
+  transform: scale(1.05);
+}
+.news-card .button {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.news-card:hover .button {
+  background-color: #421f04;
+  color: #ffffff;
 }
 
 /* ===== TEAM PAGE ===== */
@@ -370,27 +401,6 @@ main {
   margin-top: 4px;
 }
 
-.coach-on-pitch {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  text-align: center;
-  z-index: 3;
-}
-
-.coach-on-pitch img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 4px solid #ffde59;
-  object-fit: cover;
-}
-
-.coach-on-pitch p {
-  margin-top: 6px;
-  font-weight: bold;
-  color: #ffffff;
-}
 
 .tag {
   display: inline-block;
@@ -401,20 +411,36 @@ main {
 }
 
 .formation-section {
-  text-align: center;
   margin: 50px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
 }
 
 .formation-section h2 {
   font-size: 2.3rem;
   margin-bottom: 30px;
 }
+.formation-subtitle {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 6px 14px;
+  background-color: #ffde59;
+  color: #421f04;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
 
 .formation-pitch {
   position: relative;
-  max-width: 950px;
-  height: 1250px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1080px;
+  height: 720px;
   border: 8px solid #ffffff;
   border-radius: 26px;
   overflow: hidden;
@@ -426,50 +452,18 @@ main {
       #458f43 120px,
       #458f43 240px
     );
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+  z-index: 1;
 }
-
-.formation-pitch::before {
+.half-pitch::before {
   content: "";
   position: absolute;
   inset: 18px;
   border: 4px solid rgba(255, 255, 255, 0.95);
+  border-bottom: none;
   z-index: 1;
 }
 
-.formation-pitch::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  right: 18px;
-  border-top: 4px solid rgba(255, 255, 255, 0.95);
-  z-index: 1;
-}
 
-.pitch-center-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 190px;
-  height: 190px;
-  transform: translate(-50%, -50%);
-  border: 4px solid rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.pitch-center-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 14px;
-  height: 14px;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border-radius: 50%;
-  z-index: 1;
-}
 
 .pitch-box-top {
   position: absolute;
@@ -495,33 +489,9 @@ main {
   z-index: 1;
 }
 
-.pitch-box-bottom {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  width: 340px;
-  height: 170px;
-  transform: translateX(-50%);
-  border: 4px solid rgba(255, 255, 255, 0.95);
-  border-bottom: none;
-  z-index: 1;
-}
-
-.pitch-small-box-bottom {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  width: 180px;
-  height: 85px;
-  transform: translateX(-50%);
-  border: 4px solid rgba(255, 255, 255, 0.95);
-  border-bottom: none;
-  z-index: 1;
-}
-
 .pitch-player {
   position: absolute;
-  width: 170px;
+  width: 150px;
   transform: translate(-50%, -50%);
   text-align: center;
   cursor: pointer;
@@ -536,9 +506,32 @@ main {
   transform: translate(-50%, -50%) scale(1.08);
 }
 
+.pitch-player.coach {
+  position: static;
+  width: 190px;
+  transform: none;
+  background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+  border: 2px solid #ffde59;
+  border-radius: 20px;
+  padding: 14px;
+  text-align: center;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 222, 89, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+}
+
+.pitch-player.coach:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(255, 222, 89, 0.5);
+}
+
 .pitch-player img {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: 5px solid #ffde59;
   object-fit: cover;
@@ -567,19 +560,20 @@ main {
 }
 
 /* positions */
-.goalkeeper { top: 89%; left: 50%; }
-.left-back { top: 74%; left: 18%; }
-.centre-back-1 { top: 76%; left: 38%; }
-.centre-back-2 { top: 76%; left: 62%; }
-.right-back { top: 74%; left: 82%; }
+.goalkeeper { top: 16%; left: 50%; }
 
-.midfielder-1 { top: 58%; left: 50%; }
-.midfielder-2 { top: 50%; left: 30%; }
-.midfielder-3 { top: 50%; left: 70%; }
+.left-back { top: 35%; left: 16%; }
+.centre-back-1 { top: 31%; left: 34%; }
+.centre-back-2 { top: 31%; left: 66%; }
+.right-back { top: 35%; left: 84%; }
 
-.left-wing { top: 28%; left: 20%; }
-.striker { top: 20%; left: 50%; }
-.right-wing { top: 28%; left: 80%; }
+.midfielder-1 { top: 50%; left: 50%; }
+.midfielder-2 { top: 56%; left: 30%; }
+.midfielder-3 { top: 56%; left: 70%; }
+
+.left-wing { top: 74%; left: 18%; }
+.striker { top: 84%; left: 50%; }
+.right-wing { top: 74%; left: 82%; }
 
 /* ===== FUT CARD ===== */
 .card-overlay {
@@ -596,7 +590,6 @@ main {
   opacity: 1;
   pointer-events: auto;
 }
-
 .fut-card {
   position: fixed;
   top: 40%;
@@ -622,6 +615,7 @@ main {
   transition:
     transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.45s ease;
+  isolation: isolate;
 }
 
 .fut-card.show {
@@ -659,7 +653,10 @@ main {
   box-shadow: inset -18px 0 30px rgba(0, 0, 0, 0.12);
   pointer-events: none;
 }
-
+.fut-card::before,
+.fut-card::after {
+  pointer-events: none;
+}
 .fut-card.show:hover {
   transform:
     translate(-50%, -50%)
@@ -680,14 +677,6 @@ main {
   background: transparent;
 }
 
-.card-rating {
-  position: absolute;
-  top: 18px;
-  left: 20px;
-  font-family: "Oswald", sans-serif;
-  font-size: 2rem;
-  color: #5a2500;
-}
 
 .card-position {
   position: absolute;
@@ -710,23 +699,31 @@ main {
   margin-bottom: 10px;
 }
 
+
 .close-card {
   position: absolute;
   top: 12px;
-  right: 14px;
-  width: 28px;
-  height: 28px;
+  right: 12px;
+
+  width: 42px;
+  height: 42px;
+
   border: none;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 50%;
-  font-size: 18px;
+
+  font-size: 20px;
   font-weight: bold;
   color: #5a2500;
-  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s ease;
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  z-index: 9999; /* TRÈS IMPORTANT */
 }
 
 .close-card:hover {
@@ -741,6 +738,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 4px solid #0081cc;
 }
 
 .footer-links {
@@ -771,9 +769,8 @@ main {
 }
 
 .social-media img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+  width: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 /* ===== ABOUT PAGE ===== */
 .about-layout {
@@ -787,33 +784,43 @@ main {
 .about-main-card,
 .about-side-card,
 .about-gallery-card,
-.about-contact-card {
+.about-contact-card,
+.about-reference-card {
   background-color: #ffffff;
   border: 4px solid #0081cc;
   border-radius: 24px;
   padding: 24px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
 .about-main-card h2,
 .about-side-card h2,
 .about-gallery-card h2,
-.about-contact-card h2 {
+.about-contact-card h2,
+.about-reference-card h2 {
   margin-bottom: 16px;
   color: #0081cc;
 }
 
 .about-main-card p,
 .about-side-card p,
-.about-contact-card p {
+.about-contact-card p,
+.about-reference-card p {
   margin-bottom: 12px;
 }
-
+.about-contact-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  height: fit-content;
+  align-self: start;
+}
 .about-bottom-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
   margin-bottom: 50px;
+  align-items: start;
 }
 
 .about-gallery-card img {
@@ -821,4 +828,60 @@ main {
   max-height: 320px;
   object-fit: cover;
   border-radius: 16px;
+}
+.carousel {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  border: 4px solid #0081cc;
+  border-radius: 16px;
+}
+
+.carousel-track {
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  animation: gallerySlide 18s infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+@keyframes gallerySlide {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+
+  25%,
+  45% {
+    transform: translateX(-100%);
+  }
+
+  50%,
+  70% {
+    transform: translateX(-200%);
+  }
+
+  75%,
+  95% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Coach container for alignment */
+.coach-container {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 40px;
 }

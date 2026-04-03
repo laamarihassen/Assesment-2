@@ -14,15 +14,21 @@
   <header class="site-header">
     <nav class="top-bar">
       <a href="index.html">
-        <img src="images/logo.png" alt="Palaiseau Sydney Club logo" class="logo">
+        <img src="images/Home_page/logo.png" alt="Palaiseau Sydney Club logo" class="logo">
       </a>
 
       <!-- Only Home, Team, Women's Team and About pages are functional for this assessment -->
       <ul class="desktop-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="#">Match</a></li>
-        <li><a href="#">News</a></li>
+        <li class="dropdown">
+          <a href="team.html">Team</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="return false;">Men's Team</a></li>
+            <li><a href="womens-team.html">Women's Team</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="return false;">Match</a></li>
+        <li><a href="#" onclick="return false;">News</a></li>
         <li><a class="active" href="about.html">About</a></li>
       </ul>
     </nav>
@@ -52,18 +58,25 @@
 
       <aside class="about-side-card">
         <h2>Club Info</h2>
-        <p><strong>Founded:</strong> 2026</p>
+        <p><strong>Founded:</strong> 2020</p>
         <p><strong>Location:</strong> Palaiseau, France</p>
         <p><strong>Stadium:</strong> Brassens Stadium</p>
         <p><strong>Colours:</strong> Blue, Yellow, Black</p>
-        <p><strong>Motto:</strong> Always Advancing</p>
       </aside>
     </section>
 
     <section class="about-bottom-grid">
       <article class="about-gallery-card">
         <h2>Gallery</h2>
-        <img src="images/about-team.jpg" alt="Palaiseau Sydney Club team photo">
+
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="images/About_page/galerie1.jpg" alt="Club gallery image 1">
+            <img src="images/About_page/galerie2.jpg" alt="Club gallery image 2">
+            <img src="images/About_page/galerie3.jpg" alt="Club gallery image 3">
+            <img src="images/About_page/galerie1.jpg" alt="Club gallery image 1 duplicate">
+          </div>
+        </div>
       </article>
 
       <article class="about-contact-card">
@@ -72,14 +85,55 @@
         <p><strong>Phone:</strong> +33 1 23 45 67 89</p>
         <p><strong>Address:</strong> Brassens Stadium, Palaiseau</p>
       </article>
+
+      <article class="about-reference-card">
+        <h2>References</h2>
+
+        <p><strong>Home Page (Accessed: 25 March 2026)</strong></p>
+        <p>Pexels (n.d.) Football players preparing before a match. Available at: https://www.pexels.com/fr-fr/photo/29558685/</p>
+        <p>Google Images (n.d.) Olympique de Marseille logo. Available at: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd09x48frya4fBFmRQpKiS5wIskXGkqtJXNQ&s</p>
+        <p>Wikimedia Commons (n.d.) UEFA Champions League logo (no text). Available at: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/UEFA_Champions_League_logo_no_text.svg/960px-UEFA_Champions_League_logo_no_text.svg.png</p>
+        <p>Pexels (n.d.) Youth football teams celebrating after match. Available at: https://www.pexels.com/fr-fr/photo/les-equipes-de-jeunes-de-football-se-felicitent-apres-le-match-29558645/</p>
+        <p>Pexels (n.d.) Football activity image. Available at: https://www.pexels.com/fr-fr/photo/35273327/</p>
+
+        <p><strong>Social Media Icons (Accessed: 26 March 2026)</strong></p>
+        <p>Vecteezy (n.d.) Facebook logo PNG. Available at: https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png</p>
+        <p>Vecteezy (n.d.) Instagram logo PNG. Available at: https://www.vecteezy.com/png/18930413-instagram-logo-png-instagram-icon-transparent</p>
+
+        <p>Freepik (n.d.) TikTok logo. Available at: https://img.freepik.com/premium-photo/tiktok-logo_1080029-103.jpg</p>
+
+        <p><strong>Team Page (Accessed: 30 March 2026)</strong></p>
+        <p>Pexels (n.d.) Young football player on field in Hanoi. Available at: https://www.pexels.com/fr-fr/photo/un-jeune-footballeur-sur-un-terrain-a-hanoi-29558654/</p>
+        <p>Pexels (n.d.) Women’s football team image. Available at: https://images.pexels.com/photos/30520952/pexels-photo-30520952.jpeg</p>
+
+        <p><strong>Women’s Team Page (Accessed: 31 March 2026)</strong></p>
+        <p>Self-created (2026) Women’s team player images (edited).</p>
+
+        <p><strong>About Page (Accessed: 2 April 2026)</strong></p>
+        <p>Pexels (n.d.) Football team celebrating victory. Available at: https://images.pexels.com/photos/13907421/pexels-photo-13907421.jpeg</p>
+        <p>Pexels (n.d.) Youth football team celebration in Hanoi. Available at: https://www.pexels.com/fr-fr/photo/l-equipe-de-football-des-jeunes-celebre-sa-victoire-a-hanoi-29558674/</p>
+        <p>Pexels (n.d.) Football training image. Available at: https://www.pexels.com/fr-fr/photo/29388434/</p>
+
+        <p><strong>Custom Assets</strong></p>
+        <p>Self-created with Canva (2026) PSC Logo.</p>
+
+        <p><strong>Learning Resources (Accessed: 22 March - 03 April 2026)</strong></p>
+        <p>W3Schools (n.d.) CSS Tutorial. Available at: https://www.w3schools.com/css/</p>
+        <p>W3Schools (n.d.) CSS Dropdowns. Available at: https://www.w3schools.com/css/css_dropdowns.asp</p>
+        <p>W3Schools (n.d.) CSS position Property. Available at: https://www.w3schools.com/cssref/pr_class_position.php</p>
+        <p>W3Schools (n.d.) CSS transform Property. Available at: https://www.w3schools.com/cssref/css3_pr_transform.php</p>
+        <p>W3Schools (n.d.) CSS Animations. Available at: https://www.w3schools.com/css/css3_animations.asp</p>
+
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
     <nav class="footer-links">
+      <a href="index.html">Home</a>
       <a href="team.html">Team</a>
-      <a href="#">Match</a>
-      <a href="#">News</a>
+      <a href="#" onclick="return false;">Match</a>
+      <a href="#" onclick="return false;">News</a>
       <a href="about.html">About</a>
     </nav>
 
@@ -89,9 +143,9 @@
     </section>
 
     <nav class="social-media">
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+      <a href="#"><img src="images/Social_media/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/Social_media/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="images/Social_media/tiktok.png" alt="TikTok"></a>
     </nav>
   </footer>
 
