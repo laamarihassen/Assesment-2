@@ -71,6 +71,7 @@ main {
 }
 
 .desktop-nav > li > a {
+  font-family: "Oswald", sans-serif;
   background-color: #0081cc;
   color: #ffffff;
   padding: 10px 18px;
@@ -80,9 +81,10 @@ main {
 
 .desktop-nav > li > a:hover,
 .desktop-nav > li > a.active {
-  background-color: #000000;
+  background-color: #421f04;
 }
-/* Dropdown container */
+
+/* Dropdown */
 .dropdown {
   position: relative;
   z-index: 1200;
@@ -91,59 +93,59 @@ main {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
   list-style: none;
   padding: 10px 0;
   margin: 0;
-  min-width: 150px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #ffffff;
+  min-width: 180px;
   border: 2px solid #0081cc;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 1300;
 }
 
-/* Items */
 .dropdown-menu li {
-  padding: 10px 20px;
+  padding: 0;
 }
 
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* Dropdown hover */
 .dropdown-menu li a {
   display: block;
   width: 100%;
-  padding: 12px 20px;
-  color: rgb(0, 0, 0);
-  background: transparent;
-  border-radius: 0;
-  background-color: #f2f2f2;
-}
-
-/* Hover effect */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Optionnel : hover style */
-.dropdown-menu li a {
-  display: block;
   padding: 14px 20px;
   color: #421f04;
   font-weight: 500;
+  background-color: #f2f2f2;
   transition: all 0.2s ease;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #ffde59; /* jaune du site */
+  width: 92%;
+  background-color: #ffde59;
   color: #000;
-  transform: translateX(5px); /* petit effet stylé */
+  transform: translateX(5px);
 }
-/* ===== PAGE TITLES ===== */
+
+/* ===== PAGE TITLE ===== */
 .page-title {
   text-align: center;
   margin-bottom: 25px;
+}
+
+/* Page-specific titles */
+#home-page .page-title h1,
+#team-page .page-title h1,
+#womens-team-page .page-title h1,
+#about-page .page-title h1 {
+  color: #0081cc;
 }
 
 .page-title h1 {
@@ -151,6 +153,7 @@ main {
 }
 
 /* ===== HERO ===== */
+
 .hero {
   margin-bottom: 40px;
 }
@@ -175,11 +178,11 @@ main {
 .button:hover,
 .ticket-button:hover,
 .team-selection-button:hover {
-  background-color: #0081cc;
+  background-color: #421f04;
   color: #ffffff;
 }
 
-/* ===== HOME - UPCOMING MATCH ===== */
+/* ===== HOME: UPCOMING MATCH ===== */
 .match-section {
   text-align: center;
   margin: 50px 0;
@@ -189,6 +192,7 @@ main {
   font-size: 2.5rem;
   margin-bottom: 25px;
 }
+
 .match-competition {
   display: inline-block;
   background-color: #0081cc;
@@ -199,6 +203,7 @@ main {
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
+
 .upcoming-card {
   position: relative;
   max-width: 950px;
@@ -300,6 +305,7 @@ main {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .news-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -318,9 +324,11 @@ main {
   margin: 14px auto 18px;
   transition: transform 0.4s ease;
 }
+
 .news-card:hover img {
   transform: scale(1.05);
 }
+
 .news-card .button {
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -376,20 +384,20 @@ main {
 
 /* ===== WOMEN'S TEAM ===== */
 .coach {
-  top: 12%;
-  left: 12%;
   background: rgba(255, 222, 89, 0.15);
   padding: 10px;
   border-radius: 12px;
 }
+
 .coach img {
-  border: 4px solid #000000; /* noir pour contraste */
-  background: #ffde59; /* fond jaune */
+  border: 4px solid #000000;
+  background: #ffde59;
   box-shadow: 0 0 15px #ffde59;
 }
+
 .coach h3 {
   font-size: 1.1rem;
-  color:#000
+  color: #000;
 }
 
 .coach p {
@@ -400,7 +408,6 @@ main {
   font-size: 0.8rem;
   margin-top: 4px;
 }
-
 
 .tag {
   display: inline-block;
@@ -423,6 +430,7 @@ main {
   font-size: 2.3rem;
   margin-bottom: 30px;
 }
+
 .formation-subtitle {
   display: inline-block;
   margin-top: 10px;
@@ -454,6 +462,7 @@ main {
     );
   z-index: 1;
 }
+
 .half-pitch::before {
   content: "";
   position: absolute;
@@ -462,8 +471,6 @@ main {
   border-bottom: none;
   z-index: 1;
 }
-
-
 
 .pitch-box-top {
   position: absolute;
@@ -539,6 +546,7 @@ main {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
+.pitch-player h2,
 .pitch-player h3 {
   color: #ffffff;
   font-size: 1.25rem;
@@ -549,17 +557,7 @@ main {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 }
 
-.pitch-player p {
-  color: #ffde59;
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-  line-height: 1.1;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-}
-
-/* positions */
+/* Player positions */
 .goalkeeper { top: 16%; left: 50%; }
 
 .left-back { top: 35%; left: 16%; }
@@ -590,6 +588,7 @@ main {
   opacity: 1;
   pointer-events: auto;
 }
+
 .fut-card {
   position: fixed;
   top: 40%;
@@ -605,28 +604,15 @@ main {
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
   opacity: 0;
   pointer-events: none;
-  transform-style: preserve-3d;
-  transform:
-    translate(-35%, -50%)
-    perspective(1400px)
-    rotateY(125deg)
-    rotateX(12deg)
-    scale(0.72);
-  transition:
-    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.45s ease;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.8s ease, opacity 0.45s ease;
   isolation: isolate;
 }
 
 .fut-card.show {
   opacity: 1;
   pointer-events: auto;
-  transform:
-    translate(-50%, -50%)
-    perspective(1400px)
-    rotateY(0deg)
-    rotateX(0deg)
-    scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .fut-card::before {
@@ -653,17 +639,14 @@ main {
   box-shadow: inset -18px 0 30px rgba(0, 0, 0, 0.12);
   pointer-events: none;
 }
+
 .fut-card::before,
 .fut-card::after {
   pointer-events: none;
 }
+
 .fut-card.show:hover {
-  transform:
-    translate(-50%, -50%)
-    perspective(1400px)
-    rotateY(-6deg)
-    rotateX(4deg)
-    scale(1.03);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .fut-player-img {
@@ -676,7 +659,6 @@ main {
   margin: 20px auto 18px;
   background: transparent;
 }
-
 
 .card-position {
   position: absolute;
@@ -698,7 +680,6 @@ main {
   color: #3b1a05;
   margin-bottom: 10px;
 }
-
 
 .close-card {
   position: absolute;
@@ -723,7 +704,7 @@ main {
   cursor: pointer;
   pointer-events: auto;
 
-  z-index: 9999; /* TRÈS IMPORTANT */
+  z-index: 9999;
 }
 
 .close-card:hover {
@@ -772,6 +753,7 @@ main {
   width: 30px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 /* ===== ABOUT PAGE ===== */
 .about-layout {
   display: grid;
@@ -807,6 +789,7 @@ main {
 .about-reference-card p {
   margin-bottom: 12px;
 }
+
 .about-contact-card {
   width: 100%;
   max-width: 400px;
@@ -815,6 +798,7 @@ main {
   height: fit-content;
   align-self: start;
 }
+
 .about-bottom-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -829,6 +813,7 @@ main {
   object-fit: cover;
   border-radius: 16px;
 }
+
 .carousel {
   width: 100%;
   max-width: 500px;
@@ -876,7 +861,8 @@ main {
     transform: translateX(0);
   }
 }
-/* Coach container for alignment */
+
+/* Coach layout */
 .coach-container {
   width: 240px;
   display: flex;
